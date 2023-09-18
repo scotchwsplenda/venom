@@ -10,7 +10,7 @@ function App() {
 
   async function fetchMoviesHandler() {
 
-    const endpoint = 'https://swapi.dev/api/films/';
+    const endpoint = '/data-api/rest/Person';
     const response = await fetch(endpoint);
     const data = await response.json();
     const ending = data.results

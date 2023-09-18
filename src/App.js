@@ -9,12 +9,15 @@ function App() {
 
 
   async function fetchMoviesHandler() {
-    const endpoint = 'https://nice-wave-08b80851e.3.azurestaticapps.net/data-api/rest/Person';
-    const response = await fetch(endpoint);
+    const endpoint = '/data-api/rest/Person';
+    console.log(endpoint)
+    const response = await fetch(endpoint)
+    // , {    headers: {'Content-Type': 'application/json', 'Access-Control-Allow-Origin':'*'}});
     console.log(response)
     const data = await response.json();
     const ending = data.results
-    // console.table(data.value);
+    console.log(data.value);
+    console.log(data.results);
     setMovies(ending)
   }
 

@@ -11,8 +11,8 @@ function App() {
   async function fetchMoviesHandler() {
     const endpoint = '/data-api/rest/Person';
     console.log(endpoint)
-    const response = await fetch(endpoint)
-    // , {    headers: {'Content-Type': 'application/json', 'Access-Control-Allow-Origin':'*'}});
+    const response = await fetch(endpoint
+    , {    headers: { 'Access-Control-Allow-Origin':'*'}});
     console.log(response)
     const data = await response.json();
     const ending = data.results
